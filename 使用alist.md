@@ -1,4 +1,4 @@
-# 使用alist搭建本地下载站
+# 使用alist搭建本地下载站  
 
 目录
 
@@ -20,7 +20,6 @@ chmod +x ./alist
 ```
 
 ## 配置alist
-
 
 ## Q&A
 
