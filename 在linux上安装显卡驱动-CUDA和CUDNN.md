@@ -49,4 +49,39 @@ sudo ./NV*.run
 
 在程序成功执行成功后，你可以用`nvidia-smi`命令检查驱动有没有正常安装。到此安装显卡驱动就结束了。
 
+### 安装CUDA
 
+这里以安装cuda 11.8为例，到cuda的官网下载cuda ( *[https://developer.nvidia.com/cuda-toolkit-archive](https://developer.nvidia.com/cuda-toolkit-archive)* )  
+找到cuda 11.8，点进去选择系统、架构、发行版、版本、然后点击带有`runfile (local)`按钮。接着就会下面出现两行代码，把它复制到linux系统中执行。  
+在cuda安装的过程中，也有简单的引导界面。有一些选项要更改。
+
+```sh
+# 第一行是下载CUDA安装文件
+# 如果linux无法下载，可以了去掉 wget 
+# 把链接复制到浏览器中，让windwos把
+# 文件下载下来，随后再上传到linux
+wget https://developer.download.nvidia.com/compute/cuda/11.8.0/local_installers/cuda_11.8.0_520.61.05_linux.run
+# 第二行是安装
+sudo sh cuda_11.8.0_520.61.05_linux.run
+```
+
+![cuda选择页面的截图]()
+
+![cuda同意许可协议]()
+
+![cuda选择安装组件]()
+
+![安装完成截图]()
+
+等待cuda程序运行完成后，还需要为cuda配置环境变量才可以使用cuda。
+
+```bash
+# 打开环境变量文件
+vim ~/.bashrc
+# 在最底下加入这两行
+# 请注意添加实际的路径
+export PATH=/usr/local/cuda-11.8/bin${PATH:+:${PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda-11.8/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+```
+
+最后用`nvcc -V`测试cuda的环境变量是否配好就行了。到此安装cuda的教程结束。
