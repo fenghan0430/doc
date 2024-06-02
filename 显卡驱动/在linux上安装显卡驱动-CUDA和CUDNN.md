@@ -24,8 +24,12 @@ sudo apt update
 sudo apt install build-essential libglvnd-dev pkg-config -y
 
 # 禁用nouveau
+# 使用驱动自动禁用，注意使用这样的方式禁用，安装完成之后必须重启
+sudo bash ./NV* --disable-nouveau
+# 手动禁用
 sudo bash -c "echo blacklist nouveau > /etc/modprobe.d/blacklist-nvidia-nouveau.conf"
 sudo bash -c "echo options nouveau modeset=0 >> /etc/modprobe.d/blacklist-nvidia-nouveau.conf"
+
 
 # 更新内核
 sudo update-initramfs -u
