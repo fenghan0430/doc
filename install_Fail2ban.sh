@@ -42,6 +42,7 @@ bantime = 600
 banaction = iptables-allports
 action = %(action_mwl)s
 logpath = /var/log/auth.log
+backend = systemd
 EOL
 
 # 重启并启用Fail2ban服务
