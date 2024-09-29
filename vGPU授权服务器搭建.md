@@ -1,3 +1,5 @@
+> 有没有可能，这东西23年你自己都研究过了？ -> https://github.com/fenghan0430/How-to-use-vGPU
+
 vGPU第三方授权服务器的项目在`https://gitea.publichub.eu/oscar.krause/fastapi-dls`
 
 他的docker版本在`https://hub.docker.com/r/collinwebdesigns/fastapi-dls`
