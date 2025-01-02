@@ -16,13 +16,13 @@ torch没有像tensorflow一样，有非常方便的gpu安装支持。所以安�
 > 只有带cuXXX的才支持调用GPU
 
 <p align="center">
-    <img src="./pictrue/how_to_install_pytoch_for_gpu/2.png" alt="图片描述" width="1000"/>
+    <img src="../pictrue/how_to_install_pytoch_for_gpu/2.png" alt="图片描述" width="1000"/>
 </p>
 
 找到想要安装的torch后，例如我要安装torch-2.0.0，然后你会发现它有多个版本
 
 <p align="center">
-    <img src="./pictrue/how_to_install_pytoch_for_gpu/3.png" alt="图片描述" width="1000"/>
+    <img src="../pictrue/how_to_install_pytoch_for_gpu/3.png" alt="图片描述" width="1000"/>
 </p>
 
 让我给你捋一捋，拿`torch-2.0.0%2Bcu118-cp310-cp310-linux_x86_64.whl`给你举例，`torch-2.0.0`是torch的版本，cu118代表这是CUDA 11.8的torch，`cp310-cp310`说明这是给python 3.10准备的，`linux_x86_64`表示这个是给linux版本的。
@@ -30,7 +30,7 @@ torch没有像tensorflow一样，有非常方便的gpu安装支持。所以安�
 没听懂？那再把上面的看几遍！同理`torch-2.0.0%2Bcu118-cp311-cp311-win_amd64.whl`就是给CUDA11.8，Python 3.11，Windows平台准备的`torch-2.0.0`。
 
 <p align="center">
-    <img src="./pictrue/how_to_install_pytoch_for_gpu/5.png" alt="图片描述" width="1000"/>
+    <img src="../pictrue/how_to_install_pytoch_for_gpu/5.png" alt="图片描述" width="1000"/>
 </p>
 
 找到你想要的版本，这个时候，你就可以把torch下载下来了。

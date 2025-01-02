@@ -6,5 +6,5 @@
 
 
 <p>
-  <img src="./pictrue/install_ubuntu_black/show.jpeg" width="400px">
+  <img src="../pictrue/install_ubuntu_black/show.jpeg" width="400px">
 </p>

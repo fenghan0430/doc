@@ -45,7 +45,7 @@ lsmod | grep nouveau
 随后，要先去nvidia官网下载适用于你显卡的驱动文件。nvidia驱动下载地址 ( *[https://www.nvidia.cn/Download/index.aspx?lang=cn](https://www.nvidia.cn/Download/index.aspx?lang=cn)* )  
 把下载的驱动上传到linux后，先为驱动添加执行权限，随后用root执行安装文件。
 
-![下载驱动页面的图片](./pictrue/linux_install_nvidia/download_nvidia_driver.png)
+![下载驱动页面的图片](../pictrue/linux_install_nvidia/download_nvidia_driver.png)
 
 ```sh
 # 请修改驱动名为自己的驱动名
@@ -125,14 +125,33 @@ sudo chmod 777 ./cudnn*
 # 切换到动态链接库
 cd ../lib64
 # 复制文件
-sudo cp ~/cudnn*/libcudnn* ./
+sudo cp -P ~/cudnn*/libcudnn* ./
 # 添加权限
 sudo chmod 777 ./libcudnn*
+sudo chmod a+r /usr/local/cuda/include/cudnn*.h /usr/local/cuda/lib64/libcudnn*
 ```
 
 ![一张文件复制的示意图]()
 
 这样，cudnn的安装就结束了
+
+cudnn_v8，验证安装
+```bash
+# 安装依赖
+sudo apt install libfreeimage-dev build-essential -y
+
+# 克隆测试代码
+git clone https://github.com/fenghan0430/cudnn_samples_v8.git
+cd cudnn_samples_v8/mnistCUDNN/
+
+# 编译测试程序
+make clean && make
+
+# 运行测试
+./mnistCUDNN
+
+# 出现Test passed!就是安装成功
+```
 
 ### 疑难杂症
 
