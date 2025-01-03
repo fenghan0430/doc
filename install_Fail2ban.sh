@@ -12,7 +12,7 @@ apt update -y
 
 # 安装Fail2ban
 echo "安装Fail2ban..."
-apt install -y fail2ban
+apt install -y fail2ban iptables
 
 # 备份原始配置文件
 echo "备份原始配置文件..."
