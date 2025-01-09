@@ -9,3 +9,11 @@ sudo usermod -aG docker $USER
 ```
 sudo chmod 777 /var/run/docker.sock
 ```
+
+### docker GPU总是时好时坏
+
+加参数`--privileged`
+
+```
+docker run --gpus all --privileged ...
+```
