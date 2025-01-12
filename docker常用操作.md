@@ -17,3 +17,11 @@ sudo chmod 777 /var/run/docker.sock
 ```
 docker run --gpus all --privileged ...
 ```
+
+### docker 指定调用GPU
+
+```
+docker run --gpus all
+docker run --gpus="'device=0'"
+docker run --gpus="'device=0,1'"
+```
